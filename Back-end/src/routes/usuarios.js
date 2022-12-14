@@ -11,7 +11,6 @@ router.post("/", async (req, res) => {
           //hola
             console.log(req.body)
             const usuarios = await Usuarios.create(req.body);
-            usuarios.Nacimiento =fecha
             let actividadesObj ={}
             actividadesObj.Id_usuario = usuarios._id
             actividadesObj.Create_date = fecha
