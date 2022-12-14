@@ -1,0 +1,48 @@
+
+
+<div class="container">
+    <p>agregar usuario</p>
+<div class="row">
+    <div >
+        <form>
+            <div class="mb-3">
+                <label class="form-label">Nombre:</label>
+                <input [(ngModel)]="usuario.Nombre" type="text" class="form-control" name="Nombre"> 
+            </div>
+
+            <div class="mb-3"> <label class="form-label">Apellido:</label>
+                <input [(ngModel)]="usuario.Apellido" type="text" class="form-control" name="Apellido"> 
+            </div>
+
+            <div class="mb-3"> <label class="form-label">Correo:</label>
+                <input [(ngModel)]="usuario.Correo" type="text" class="form-control" name="Correo"> 
+    
+            </div>
+            <div class="mb-3"><label class="form-label">Nacimiento:</label>
+                <input [(ngModel)]="usuario.Nacimiento" type="date" class="form-control" name="Nacimiento"> 
+            </div>
+            <div class="mb-3"><label class="form-label">Telefono:</label>
+                <input [(ngModel)]="usuario.Telefono" type="number" class="form-control" name="Telefono"> 
+            </div>
+            <select [(ngModel)]="usuario.Pais"  id="country" class="form-control"  name="Pais">
+                <option *ngFor="let Country of ListarCountries"  [value]=Country.cod>
+                            {{Country.name}}
+                        </option>
+                      </select>
+
+            <div class="mb-3"><label class="form-label">¿Desea recibir información?</label>
+                <!-- <input [(ngModel)]="usuario.Pregunta" type="text" class="form-control" name="Pregunta">  -->
+                <select [(ngModel)]="usuario.Pregunta"   class="form-control"  name="Pregunta">
+                    <!-- <option selected>Open this select menu</option> -->
+                    <option selected disabled >Selecciona una opción</option>
+                    <option value="true" >si </option>
+                    <option value="false">no </option>
+                    </select>
+            </div>
+            <button (click)="agregar()" class="btn btn-primary">Agregar</button>
+            
+        </form>
+    </div>
+
+</div>
+</div>

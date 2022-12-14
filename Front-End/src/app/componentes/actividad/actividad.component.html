@@ -1,0 +1,22 @@
+<br>
+<p>Lista de actividad</p>
+
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">id actividad</th>
+        <th scope="col">Fecha</th>
+        <th scope="col">Id_Usuario</th>
+        <th scope="col">Actividad</th>
+      </tr>
+    </thead>
+    
+    <tbody>
+      <tr *ngFor="let Actividad of ListarActividad">
+        <th>{{Actividad._id}}</th>
+        <th>{{Actividad.Create_date}}</th>
+        <th>{{Actividad.Id_usuario}}</th> 
+        <th>{{Actividad.Actividad}}</th>
+      </tr>
+    </tbody>
+  </table>

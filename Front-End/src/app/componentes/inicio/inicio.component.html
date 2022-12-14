@@ -1,0 +1,35 @@
+<br>
+<p>Lista de usuarios</p>
+<button routerLink="/add" type="button" class="btn btn-success">Agregar usuario</button>
+<button type="button" onclick="location.reload()" class="btn btn-primary">Recargar pagina</button>
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">id</th>
+        <th scope="col">Nombre</th>
+        <th scope="col">Apellido</th>
+        <th scope="col">Correo Electrónico</th>
+        <th scope="col">Fecha de Nacimiento</th>
+        <th scope="col">Teléfono</th>
+        <th scope="col">País de Residencia</th>
+        <th scope="col">Recibe información</th>
+        <th scope="col">Editar</th>
+        <th scope="col">Eliminar</th>
+      </tr>
+    </thead>
+    
+    <tbody>
+      <tr *ngFor="let Usuario of ListarUsers">
+        <th>{{Usuario._id}}</th>
+        <th>{{Usuario.Nombre}}</th>
+        <th>{{Usuario.Apellido}}</th> 
+        <th>{{Usuario.Correo}}</th>
+        <th>{{Usuario.Nacimiento}}</th>
+         <th>{{Usuario.Telefono}}</th>
+        <th>{{Usuario.Pais}}</th>
+        <th>{{Usuario.Pregunta}}</th> 
+        <th><button (click)="modificar(Usuario._id!)" type="button" class="btn btn-warning">Editar</button></th>
+        <th><button (click)="eliminar(Usuario._id!)" type="button" onclick="location.reload()" class="btn btn-danger">Eliminar</button></th> 
+      </tr>
+    </tbody>
+  </table>
