@@ -31,9 +31,9 @@ ngOnInit(): void {
 listarCountries(){
   this.UserService.getPaises().subscribe(
     res=>{
-      console.log(res)
+      
       this.ListarCountries = <any>res;
-      console.log(this.ListarCountries)
+    
     },
     err=> console.log(err)
   )

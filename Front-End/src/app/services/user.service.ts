@@ -11,7 +11,7 @@ export class UserService {
  
   }
 
-//get usuarios
+
 getUsuarios(){
   return this.http.get(this.url)
 }
@@ -41,9 +41,6 @@ addActiv(){
   return this.http.get(this.activity)
 }
 
-
-
-
 }
 export interface Usuario {
   _id?:string ;
@@ -55,8 +52,6 @@ export interface Usuario {
   Pais?:string;
   Pregunta?:Boolean;
 }
-
-
 
 export interface Country {
   name?:string ;

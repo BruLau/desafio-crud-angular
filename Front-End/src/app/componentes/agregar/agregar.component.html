@@ -22,8 +22,9 @@
                 <input [(ngModel)]="usuario.Nacimiento" type="date" class="form-control" name="Nacimiento"> 
             </div>
             <div class="mb-3"><label class="form-label">Telefono:</label>
-                <input [(ngModel)]="usuario.Telefono" type="number" class="form-control" name="Telefono"> 
+                <input [(ngModel)]="usuario.Telefono" type="number" class="form-control" name="Telefono" placeholder="solo numeros"> 
             </div>
+            <label class="form-label">País de Residencia</label>
             <select [(ngModel)]="usuario.Pais"  id="country" class="form-control"  name="Pais">
                 <option *ngFor="let Country of ListarCountries"  [value]=Country.cod>
                             {{Country.name}}

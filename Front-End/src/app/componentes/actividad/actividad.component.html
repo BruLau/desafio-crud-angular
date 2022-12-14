@@ -12,7 +12,7 @@
     </thead>
     
     <tbody>
-      <tr *ngFor="let Actividad of ListarActividad">
+      <tr *ngFor="let Actividad of ListarActividad.reverse() ">
         <th>{{Actividad._id}}</th>
         <th>{{Actividad.Create_date}}</th>
         <th>{{Actividad.Id_usuario}}</th> 

@@ -23,16 +23,20 @@
             <div class="mb-3"><label class="form-label">Telefono:</label>
                 <input [(ngModel)]="usuario.Telefono" type="number" class="form-control" name="Telefono"> 
             </div>
-            <div class="mb-3"><label class="form-label">Pais:</label>
+            <div class="mb-3"><label class="form-label">País de Residencia</label>
                 <select [(ngModel)]="usuario.Pais"  id="country" class="form-control"  name="Pais">
                     <option *ngFor="let Country of ListarCountries"  [value]=Country.cod>
                                 {{Country.name}}
                             </option>
                           </select>
             </div>
-            <div class="mb-3"><label class="form-label">Pregunta:</label>
-                <input [(ngModel)]="usuario.Pregunta" type="text" class="form-control" name="Pregunta"> 
-            </div>
+            <div class="mb-3"><label class="form-label">¿Desea recibir información?</label>
+            <select [(ngModel)]="usuario.Pregunta"   class="form-control"  name="Pregunta">
+                <!-- <option selected>Open this select menu</option> -->
+                <option selected disabled >Selecciona una opción</option>
+                <option value="true" >si </option>
+                <option value="false">no </option>
+                </select></div>
             <button (click)="modificar()" class="btn btn-primary">Guardar</button>
             
         </form>

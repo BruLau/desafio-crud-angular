@@ -22,7 +22,6 @@ listarActividad(){
     res=>{
       
       this.ListarActividad = <any>res ;
-      console.log(this.ListarActividad.reverse())
     },
     err=> console.log(err)
   )
